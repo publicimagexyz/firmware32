@@ -103,7 +103,7 @@ static const uint8_t SCK  = SPI_SCK_PIN;
 // commonly mislabeled SSD1306 and have different pixel addressing).
 // If colours are inverted, set TFT_INVERTION to 1.
 #define USE_LOVYANGFX  1
-#define LOVYAN_PANEL   Panel_SH1106
+#define LOVYAN_PANEL   Panel_SH110x
 #define LOVYAN_BUS     Bus_I2C
 #define LOVYAN_I2C_BUS 1
 
