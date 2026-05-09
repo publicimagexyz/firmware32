@@ -99,8 +99,11 @@ static const uint8_t SCK  = SPI_SCK_PIN;
 #define TOUCH_CS -1
 
 // LovyanGFX I²C bus
+// If display shows all pixels lit, try Panel_SH1107 (SH1106 modules are
+// commonly mislabeled SSD1306 and have different pixel addressing).
+// If colours are inverted, set TFT_INVERTION to 1.
 #define USE_LOVYANGFX  1
-#define LOVYAN_PANEL   Panel_SSD1306
+#define LOVYAN_PANEL   Panel_SH1107
 #define LOVYAN_BUS     Bus_I2C
 #define LOVYAN_I2C_BUS 1
 
@@ -109,7 +112,7 @@ static const uint8_t SCK  = SPI_SCK_PIN;
 #define TFT_I2C_READ  400000
 #define TFT_SDA       GROVE_SDA // GPIO21
 #define TFT_SCL       GROVE_SCL // GPIO22
-#define TFT_ADDR      0x3C      // SSD1306 default address (0x3D if SA0 is HIGH)
+#define TFT_ADDR      0x3C      // SSD1306/SH1106 default (0x3D if SA0 pulled HIGH)
 
 // Panel geometry
 #define TFT_CS       -1
